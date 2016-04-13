@@ -1,0 +1,6 @@
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\bin\WebApplication1.dll
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\UNSS1\8 семестър\elektronen business\upr\WebApplication1\WebApplication1\obj\Debug\EBook.csprojResolveAssemblyReference.cache

@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebFormMenu.master.cs" Inherits="WebApplication1.WebFormMenu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Електронна книжарница</title>
+    
+    <link href="StyleSheet1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+
+
+    
+    </head>
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+         
+         
+
+          <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+
+<div id="outer-container">  
+    <div id="header">  
+        
+            <!--
+            <asp:Label ID="Label1" runat="server" style="background-color: #FF00FF" Text="E - Books"></asp:Label>
+            -->        
+            <img src="img/eBOOK.jpg" /><br />
+             &nbsp;<asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSourceBooksImg" />
+             <asp:XmlDataSource ID="XmlDataSourceBooksImg" runat="server" DataFile="~/AdRotatorSource.xml"></asp:XmlDataSource>
+             </div>
+
+     <div id="header1">
+        
+             <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <asp:Login ID="Login1" runat="server" ForeColor="#CC0066" meta:resourcekey="Login1Resource1">
+                            </asp:Login>
+                            <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" Visible="False" meta:resourcekey="PasswordRecovery1Resource1">
+                            </asp:PasswordRecovery>
+                            <br />
+                            <asp:LinkButton ID="LinkButton1" runat="server" meta:resourcekey="LinkButton1Resource1">Забравена парола</asp:LinkButton>
+                            <br />
+                        </AnonymousTemplate>
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="User">
+                                <ContentTemplate>
+                                    <asp:LoginName ID="LoginNameUser" runat="server" meta:resourcekey="LoginNameUserResource1" />
+                                    <br />
+                                    <asp:LoginStatus ID="LoginStatusUser" runat="server" meta:resourcekey="LoginStatusUserResource1" />
+                                    <br />
+                                    <asp:ChangePassword ID="ChangePasswordUser" runat="server" Visible="False" ForeColor="#990099" meta:resourcekey="ChangePasswordUserResource1">
+                                    </asp:ChangePassword>
+                                    <asp:LinkButton ID="LinkbtnCangePassUser" runat="server" OnClick="LinkbtnCangePassUser_Click" meta:resourcekey="LinkbtnCangePassUserResource1">Смяна на парола“</asp:LinkButton>
+                                    <br />
+                                    <br />
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                            <asp:RoleGroup Roles="Admin">
+                                <ContentTemplate>
+                                    <asp:LoginName ID="LoginNameAdmin" runat="server" meta:resourcekey="LoginNameAdminResource1" />
+                                    <br />
+                                    <asp:LoginStatus ID="LoginStatusAdmin" runat="server" meta:resourcekey="LoginStatusAdminResource1" />
+                                    <br />
+                                    <asp:ChangePassword ID="ChangePasswordAdmin" runat="server" Visible="False" ForeColor="Lime" meta:resourcekey="ChangePasswordAdminResource1">
+                                    </asp:ChangePassword>
+                                    <asp:LinkButton ID="LinkBtnCangePassAdmin" runat="server" OnClick="LinkBtnCangePassAdmin_Click" meta:resourcekey="LinkBtnCangePassAdminResource1">Смяна на парола</asp:LinkButton>
+                                    <br />
+                                    <asp:LinkButton ID="LinkBtnCreateClient" runat="server" OnClick="LinkBtnCreateClient_Click" meta:resourcekey="LinkBtnCreateClientResource1">Създаване на потребител</asp:LinkButton>
+                                    <br />
+                                    <asp:CreateUserWizard ID="CreateUserWizardAdmin" runat="server" Visible="False" ForeColor="Red" meta:resourcekey="CreateUserWizardAdminResource1">
+                                        <WizardSteps>
+                                            <asp:CreateUserWizardStep runat="server" meta:resourcekey="CreateUserWizardStepResource1" />
+                                            <asp:CompleteWizardStep runat="server" meta:resourcekey="CompleteWizardStepResource1" />
+                                        </WizardSteps>
+                                    </asp:CreateUserWizard>
+                                    <br />
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>
+                    </asp:LoginView>
+         
+             <asp:ImageButton ID="ImageButtonBG" runat="server"  OnClick="ImageButtonBG_Click" Width="34px" ImageUrl="~/BookPictures/BG.JPG" />
+&nbsp;
+             <asp:ImageButton ID="ImageButtonUS" runat="server" OnClick="ImageButtonUS_Click" Width="38px" Height="28px" ImageUrl="~/BookPictures/EN.JPG" />
+         
+    </div>  
+    <div style="clear: both">  
+    </div>  
+  
+    <div id="top-Nav">  
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" meta:resourcekey="Menu1Resource1">
+         </asp:Menu>
+
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" meta:resourcekey="SiteMapPath1Resource1"></asp:SiteMapPath>
+        
+         
+
+         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+        
+        <marquee direction="left" >
+            <asp:Label ID="Label12" runat="server" Text="   ЕЛЕКТРОННА КНИЖАРНИЦА    " BackColor="Yellow" >
+            </asp:Label>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+            <asp:Image ImageUrl="~/BookPictures/DB333.jpg" runat="server"  />
+            &nbsp;  &nbsp;
+            <asp:Image ImageUrl="~/BookPictures/SY222.jpg" runat="server" />
+            &nbsp;  &nbsp;
+            <asp:Image ImageUrl="~/BookPictures/WB333.jpg" runat="server" /></marquee>
+          
+    </div>  
+    <div style="clear: both">  
+    </div>  
+  
+    <div id="left-nav">  
+       <%-- <h1>{ Left Side Navigation   }</h1>--%>  
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+             <br />
+         </asp:ContentPlaceHolder>
+    </div>  
+    <div id="content-container">  
+                
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          
+                 <p>
+                     <br />
+                 </p>
+                 <p>
+                 </p>
+          
+            </asp:ContentPlaceHolder>
+       
+    </div>  
+    <div style="clear: both">  
+    </div>  
+  
+    <div id="footer">  
+        <%--<h1>{ Footer }</h1> --%> 
+    </div>  
+</div>  
+
+    </form>
+</body>
+</html>

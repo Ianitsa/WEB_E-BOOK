@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <!-- The URL for the ad image -->
+    <ImageUrl>/BookPictures/aspnet2.gif</ImageUrl>
+    <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+    <!-- The alternate text for the image -->
+    <AlternateText>Visit Microsoft's Site</AlternateText>
+    <!-- The relative number of times this ad should appear -->
+    <!-- compared to the others -->
+    <Impressions>5</Impressions>
+    <!-- The topic of this ad (used for filtering) -->
+    <Keyword>ProductInfo</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>/BookPictures/DB444.jpg</ImageUrl>
+    <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+    <AlternateText>Visit Microsoft's Site</AlternateText>
+    <Impressions>5</Impressions>
+    <Keyword>ProductInfoAccessDB</Keyword>
+    
+  </Ad>
+  <Ad>
+    <ImageUrl>/BookPictures/DB555.jpg</ImageUrl>
+    <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+    <AlternateText>Visit Microsoft's Site</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>ProductInfoSQLserver2005</Keyword>
+  </Ad>
+  
+</Advertisements>
